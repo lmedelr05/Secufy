@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Dispositivo IoT{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/IoTSyles.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Secufy</a>
+        <input type="checkbox" id="check" style="display: none;">
+        <label for="check" class="icons">
+            <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </header>
+    <section id="descripcion">
+        <h2>Descripción del Dispositivo</h2>
+        <p>El dispositivo IoT de Secufy es un sistema de cámaras de seguridad avanzado diseñado para proteger tu hogar o negocio. Con su capacidad para detectar movimiento y activar alarmas, proporciona una vigilancia efectiva en tiempo real.</p>
+    </section>
+    <section id="funciones">
+        <h2>Funciones Clave</h2>
+        <ul>
+            <li>Grabación de video de alta definición</li>
+            <li>Detección de movimiento con activación de alarmas</li>
+            <li>Transmisión en vivo a través de la aplicación móvil</li>
+            <!-- Agrega más funciones según sea necesario -->
+        </ul>
+    </section>
+    <section id="especificaciones">
+        <h2>Especificaciones Técnicas</h2>
+        <ul>
+            <li>Resolución de la cámara: 1080p</li>
+            <li>Alcance de detección de movimiento: 10 metros</li>
+            <li>Conectividad: Wi-Fi 802.11 b/g/n</li>
+            <!-- Agrega más especificaciones según sea necesario -->
+        </ul>
+    </section>
+    <section id="instalacion">
+        <h2>Instalación y Configuración</h2>
+        <p>La instalación del dispositivo es rápida y sencilla. Simplemente sigue estos pasos:</p>
+        <ol>
+            <li>Conecta el dispositivo a una fuente de alimentación.</li>
+            <li>Descarga la aplicación móvil Secufy y sigue las instrucciones para conectar el dispositivo a tu red Wi-Fi.</li>
+            <li>Configura las notificaciones de alerta según tus preferencias.</li>
+        </ol>
+    </section>
+</body>
+</html>
+  

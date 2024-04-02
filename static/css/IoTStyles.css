@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+/* Reset de estilos */
+html, body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos básicos del cuerpo de la página */
+body {
+    font-family: "Poppins", sans-serif; /* Utiliza la fuente Poppins o una fuente sans-serif genérica si no está disponible */
+    background-color: #ff4e4e; /* Color de fondo */
+    color: #333; /* Color del texto principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: #333; /* Fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 20px; /* Espaciado interior */
+    display: flex; /* Usa un modelo de caja flexible */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos del logo */
+.logo {
+    font-size: 24px; /* Tamaño de fuente del logo */
+    font-weight: 700; /* Grosor de fuente */
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto del logo */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex; /* Usa un modelo de caja flexible */
+}
+
+/* Estilos de los enlaces de la barra de navegación */
+.navbar a {
+    margin-left: 20px; /* Espaciado entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color del texto de los enlaces */
+}
+
+/* Estilos de las secciones */
+#descripcion, #funciones, #especificaciones, #instalacion {
+    background-color: #fff; /* Fondo de las secciones */
+    padding: 20px; /* Espaciado interior */
+    margin: 20px 0; /* Margen superior e inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos de los títulos de secciones */
+#descripcion h2, #funciones h2, #especificaciones h2, #instalacion h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos de los párrafos de las secciones */
+#descripcion p, #funciones ul, #especificaciones ul, #instalacion p {
+    font-size: 16px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos de las listas de funciones, especificaciones e instalación */
+#funciones ul, #especificaciones ul, #instalacion ol {
+    margin-left: 20px; /* Sangría izquierda */
+}
+
+/* Estilos de los elementos de lista */
+#funciones ul li, #especificaciones ul li, #instalacion ol li {
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Media query para estilos responsivos */
+@media (max-width: 768px) {
+    /* Ocultar la barra de navegación en dispositivos móviles */
+    .navbar {
+        display: none; /* Ocultar la barra de navegación */
+        flex-direction: column; /* Cambiar la dirección de la distribución */
+        position: fixed; /* Fijar la posición */
+        top: 0; /* Arriba de la página */
+        left: 0; /* A la izquierda de la página */
+        width: 100%; /* Ancho completo */
+        background-color: #333; /* Fondo de la barra de navegación */
+        padding: 20px; /* Espaciado interior */
+    }
+
+    /* Mostrar el ícono de menú o de cierre según sea necesario */
+    #check:checked + .icons .bx-menu-alt-right {
+        display: none; /* Ocultar el ícono de menú */
+    }
+
+    #check:checked + .icons .bx-x {
+        display: block; /* Mostrar el ícono de cierre */
+    }
+
+    /* Mostrar la barra de navegación cuando se marca la casilla de verificación */
+    #check:checked ~ .navbar {
+        display: flex; /* Mostrar la barra de navegación */
+    }
+}

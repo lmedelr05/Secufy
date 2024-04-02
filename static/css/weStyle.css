@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo con transparencia y desenfoque */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Aplicar desenfoque */
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.icons {
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menu-icon {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #check {
+        display: none;
+    }
+    .icons {
+        display: block;
+    }
+    #menu-icon {
+        display: block;
+    }
+}
+
+/* Estilos generales */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: white; /* Letras en color blanco */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: -5px;
+}
+
+/* Estilos para la sección "Nuestra Historia" */
+.about-section {
+    background-color: transparent; /* Caja transparente */
+    padding: 0;
+    text-align: center;
+    margin-top: 90px; /* Separación desde la barra de desenfoque */
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección "Nuestro Equipo" */
+.team-section {
+    background-color: transparent; /* Caja transparente */
+    padding: 40px 0;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 30px; /* Separación entre imagen y texto */
+    border-radius: 50%; /* Aplicar borde redondeado para hacer la imagen un círculo */
+}
+
+.member-info h3 {
+    color: #333; /* Color del nombre */
+    margin-bottom: 5px; /* Separación entre nombre e información */
+}
+
+.member-info p {
+    color: #666; /* Color de la información */
+}
+
+hr {
+    margin: 20px 0; /* Espacio antes y después del separador */
+    border: 0;
+    border-top: 1px solid #ccc; /* Estilo y color del separador */
+}
+
+/* Estilos para la sección "Nuestra Misión y Visión" */
+.mission-vision-section {
+    background-color: transparent; /* Caja transparente */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.mission, .vision {
+    margin-bottom: 40px;
+}
+
+/* Estilos específicos para la misión y la visión */
+.mission h3, .vision h3 {
+    color: #fff; /* Color blanco para los títulos */
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+    font-style: italic;
+    color: #fff; /* Color blanco para el texto */
+    margin-bottom: 10px;
+}
