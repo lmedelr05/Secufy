@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'seani.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'seani24',
+        'NAME': 'seani',
         'USER': 'root',
-        'PASSWORD': 'example',
-        'HOST': 'localhost',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
         'PORT': 3306,
     }
 }
