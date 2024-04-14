@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Aspirante{% endblock %}
+
+{% block content %}
+<h1>Seani 2024 - {{ user.exam.full_name }} - {{ user.exam.career }}</h1>
+<hr>
+{% for module in modules %}
+<p><a href="{% url 'exam:question' module.module.id %}">{{ module }}</a>
+<br>
+<form action="{% url 'exam:save' module.module.id %}" method="post">{% csrf_token %}<input type="submit" value="Guardar Módulo"></form>
+</p>
+{% endfor %}
+
+<hr>
+<form action="{% url 'exam:save_exam' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Guardar Examen">
+</form>
+<hr>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Salir">
+</form>
+{% endblock %}
+    

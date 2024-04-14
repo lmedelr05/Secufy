@@ -1,0 +1,18 @@
+{% extends 'admin/base.html' %}
+
+{% block title %}Registrar Aspirante{% endblock %}
+
+{% block content %}
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+<h1>Agregar Aspirante</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}
