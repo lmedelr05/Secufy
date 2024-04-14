@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Nosotros{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/weStyle.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Secufy</a>
+        <input type="checkbox" id="check" style="display: none;">
+        <label for="check" class="icons">
+            <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </header>
+    
+    <section class="about-section">
+        <div class="container">
+            <h2>Nuestra Historia</h2>
+            <p>Nosotros, un grupo de estudiantes de la Universidad Tecnológica de Tlaxcala, nos complace presentar este proyecto que hemos 
+                desarrollado con el fin de aplicar los conocimientos adquiridos a lo largo de nuestros estudios durante estos últimos cuatrimestres. 
+                Con dedicación y esfuerzo, hemos trabajado en la conceptualización, diseño y ejecución de esta iniciativa, la
+                cual representa no solo un desafío intelectual, sino también un hito significativo en nuestro desarrollo académico
+                y profesional. A través de este proyecto, hemos tenido la oportunidad de poner en práctica las habilidades y competencias que hemos adquirido en diversas áreas de estudio</p>
+        </div>
+    </section>
+    
+    <section class="team-section">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-member">
+                <img src="{% static 'img/chema.jpg' %}" alt="Miembro del equipo">
+                <h3>Ismael Otamendi Sanchez</h3>
+                <p>Encargado de desarrollar el Dispositivo IoT junto con la pagina web del proyecto</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <img src="{% static 'img/causita.jpg' %}" alt="Miembro del equipo">
+                <h3>Gadiel Alcazar Bernal</h3>
+                <p>Encargado de desarrollar la aplicacón móvil de este proyecto</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <img src="{% static 'img/yojeje.jpg' %}" alt="Miembro del equipo">
+                <h3>Luis Andres Medel Recendis</h3>
+                <p>Encargado de Documentacion y apoyo con la pagina web</p>
+            </div>
+            <hr>
+            <div class="team-member">
+                <img src="{% static 'img/joto.jpg' %}" alt="Miembro del equipo">
+                <h3>Angel Ruiz Lozano</h3>
+                <p>Encargado de Documentacion</p>
+            </div>
+            <!-- Agrega más miembros del equipo según sea necesario -->
+        </div>
+    </section>
+    
+    <section class="mission-vision-section">
+        <div class="container">
+            <h2>Nuestra Misión</h2>
+            <div class="mission">
+                <p>Nuestra misión es aplicar nuestros conocimientos y habilidades adquiridas en la Universidad Tecnológica de Tlaxcala para diseñar y ejecutar proyectos que aborden desafíos relevantes en nuestra comunidad y más allá. Nos esforzamos por ofrecer soluciones integrales y sostenibles, impulsadas por la innovación y la excelencia académica, con el objetivo de generar un impacto positivo y duradero en el entorno en el que operamos.</p>
+            </div>
+            <div class="vision">
+                <h2>Nuestra Visión</h2>
+                <p>Nos visualizamos como un proyecto innovador y líder en nuestro campo, comprometido con la mejora continua y el progreso tecnológico. Buscamos ser reconocidos por nuestra capacidad para desarrollar soluciones creativas y efectivas que contribuyan al bienestar y desarrollo de la sociedad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agrega más secciones sobre la empresa según sea necesario -->
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inicio{% endblock %}</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/homeStyle.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="" class="logo">Secufy</a>
+        <input type="checkbox" id="check" style="display: none;">
+        <label for="check" class="icons">
+            <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="card">
+        <div class="face front">
+            <img src="{% static 'img/i1.jpg' %}" alt="">
+            <h3>Aplicación Web</h3>
+        </div>
+        <div class="face back">
+            <h3>Aplicación Web</h3>
+            <p>•Puedes ver las imágenes de las cámaras en tiempo real y controlar el sistema desde tu móvil. También hay un registro de eventos y medidas de seguridad para proteger tus datos.
+                </p>
+                <div class="link">
+                    <a href="{% url 'appWeb' %}">Más</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="{% static 'img/i2.jpg' %}" alt="">
+            <h3>Dispositivo IoT</h3>
+        </div>
+        <div class="face back">
+            <h3>Dispositivo IoT</h3>
+            <p>Se instalaron sensores y cámaras de calidad en el sistema de seguridad, con un circuito eficiente. Además, se activó un sistema de alarmas para detectar movimientos desconocidos, con respuesta rápida y posibilidad de intervención humana en situaciones críticas.
+            </p>
+                <div class="link">
+                    <a href="{% url 'deskopIoT' %}">Más</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="{% static 'img/i3.jpg' %}" alt="">
+            <h3>Aplicación Móvil</h3>
+        </div>
+        <div class="face back">
+            <h3>Aplicación Móvil</h3>
+            <p>Puedes ver las imágenes de las cámaras en tiempo real y controlar el sistema desde tu móvil. También hay un registro de eventos y medidas de seguridad para proteger tus datos.</p>
+                <div class="link">
+                    <a href="{% url 'appMovil' %}">Más</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
